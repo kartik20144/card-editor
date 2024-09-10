@@ -1,56 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Card Editing App</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="card-editor">
-    <!-- Swiper container for cards -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide card">
-          <div class="card-content" id="card1">
-            <!-- Draggable text elements will be added here -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card Editing App</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="card-editor">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide card">
+            <div class="card-content" id="card1"></div>
+          </div>
+          <div class="swiper-slide card">
+            <div class="card-content" id="card2"></div>
+          </div>
+          <div class="swiper-slide card">
+            <div class="card-content" id="card3"></div>
           </div>
         </div>
-        <div class="swiper-slide card">
-          <div class="card-content" id="card2">
-          </div>
-        </div>
-        <div class="swiper-slide card">
-          <div class="card-content" id="card3">
-          </div>
-        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <div class="swiper-pagination"></div>
       </div>
-      <!-- Navigation arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <!-- Pagination dots -->
-      <div class="swiper-pagination"></div>
+
+      <div class="controls">
+        <select id="fontSize">
+          <option value="2">2px</option>
+          <option value="4">4px</option>
+          <option value="6">6px</option>
+          <option value="8">8px</option>
+          <option value="10">10px</option>
+          <option value="12">12px</option>
+          <option value="14">14px</option>
+          <option value="16" selected>16px</option>
+          <option value="18">18px</option>
+          <option value="20">20px</option>
+          <option value="22">22px</option>
+          <option value="24">24px</option>
+          <option value="26">26px</option>
+          <option value="28">28px</option>
+          <option value="30">30px</option>
+          <option value="32">32px</option>
+          <option value="34">34px</option>
+          <option value="36">36px</option>
+          <option value="38">38px</option>
+          <option value="40">40px</option>
+          <option value="42">42px</option>
+          <option value="44">44px</option>
+          <option value="46">46px</option>
+          <option value="48">48px</option>
+          <option value="50">50px</option>
+          <option value="52">52px</option>
+          <option value="54">54px</option>
+          <option value="56">56px</option>
+          <option value="58">58px</option>
+          <option value="60">60px</option>
+          <option value="62">62px</option>
+          <option value="64">64px</option>
+        </select>
+        <select id="fontType">
+          <option value="Arial">Arial</option>
+          <option value="Verdana">Verdana</option>
+          <option value="Courier">Courier</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Times New Roman">Times New Roman</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Trebuchet MS">Trebuchet MS</option>
+          <option value="Comic Sans MS">Comic Sans MS</option>
+          <option value="Impact">Impact</option>
+          <option value="Lucida Console">Lucida Console</option>
+          <option value="Segoe UI">Segoe UI</option>
+          <option value="Palatino">Palatino</option>
+          <option value="Garamond">Garamond</option>
+          <option value="Fira Sans">Fira Sans</option>
+          <option value="Open Sans">Open Sans</option>
+          <option value="Roboto">Roboto</option>
+          <option value="Lato">Lato</option>
+        </select>
+        <div class="color">
+          <p1>Color: </p1>
+          <input
+            class="color-input"
+            type="color"
+            id="fontColor"
+            value="#000000"
+          />
+        </div>
+        <button id="addTextBtn">Add Text</button>
+      </div>
     </div>
 
-    <!-- Text styling controls -->
-    <div class="controls">
-      <select id="fontSize">
-        <option value="16">16px</option>
-        <option value="24">24px</option>
-        <option value="32">32px</option>
-      </select>
-      <select id="fontType">
-        <option value="Arial">Arial</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Courier">Courier</option>
-      </select>
-      <input type="color" id="fontColor" value="#000000">
-      <button id="addTextBtn">Add Text</button>
-    </div>
-  </div>
-
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

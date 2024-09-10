@@ -1,88 +1,141 @@
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  .card-editor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .swiper-container {
-    width: 400px; /* Adjust according to your 9:16 ratio */
-    height: 711px; /* Adjust according to your 9:16 ratio */
-    background-color: #f0f0f0;
-    margin-right: 20px;
-    position: relative;
-    overflow:hidden; /* Hide overflow */
-   /* Ensure padding and border are included in width and height */
-
+  font-family: Arial, sans-serif;
 }
-  
-  .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    overflow: hidden;
-  }
-  
-  .swiper-slide {
-    width: 100%; /* Ensure each slide takes full container width */
-    height: 100%; /* Ensure each slide takes full container height */
-    box-sizing: border-box; /* Ensure padding and border are included in width and height */
-  }
 
-  .card-content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden; /* Ensure the content remains inside the card */
-  }
-  
-  .draggable-text {
-    position: absolute;
-    cursor: move;
-    padding: 10px;
-    display: inline-block;
-    
-    overflow: hidden;
-    max-width: 100%; /* Restrict the text box within the card's width */
-    max-height: 100%; /* Restrict the text box within the card's height */
-    box-sizing: border-box;
-    word-wrap: break-word; /* Ensure long words are wrapped to the next line */
-    
-  }
+.card-editor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
 
+.swiper-container {
+  width: 400px;
+  height: 711px;
+  background-color: #f0f0f0;
+  margin-right: 20px;
+  position: relative;
+  overflow: hidden;
+}
 
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
 
-  .controls {
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  input[type="text"], select {
-    width: 200px;
-  }
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: rgb(236, 236, 234);
+}
 
-  
-  .swiper-button-next, .swiper-button-prev {
-    color: #000;
-  }
-  
-  .swiper-pagination {
-    bottom: 10px;
-  }
-  
-  .swiper-pagination-bullet {
-    background-color: #000;
-  }
+.card-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-  
+.draggable-text {
+  position: absolute;
+  cursor: move;
+  padding: 10px;
+  display: inline-block;
+
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  resize: both;
+}
+
+.controls {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  background: radial-gradient(
+        circle farthest-side at 0% 50%,
+        #fb1 23.5%,
+        rgba(240, 166, 17, 0) 0
+      )
+      21px 30px,
+    radial-gradient(
+        circle farthest-side at 0% 50%,
+        #b71 24%,
+        rgba(240, 166, 17, 0) 0
+      )
+      19px 30px,
+    linear-gradient(
+        #fb1 14%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 85%,
+        #fb1 0
+      )
+      0 0,
+    linear-gradient(
+        150deg,
+        #fb1 24%,
+        #b71 0,
+        #b71 26%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 74%,
+        #b71 0,
+        #b71 76%,
+        #fb1 0
+      )
+      0 0,
+    linear-gradient(
+        30deg,
+        #fb1 24%,
+        #b71 0,
+        #b71 26%,
+        rgba(240, 166, 17, 0) 0,
+        rgba(240, 166, 17, 0) 74%,
+        #b71 0,
+        #b71 76%,
+        #fb1 0
+      )
+      0 0,
+    linear-gradient(90deg, #b71 2%, #fb1 0, #fb1 98%, #b71 0%) 0 0 #fb1;
+  background-size: 40px 60px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.color {
+  background: white;
+  display: inline-block;
+}
+
+.color-input {
+  height: 20px;
+}
+
+input[type="text"],
+select {
+  width: 200px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+}
+
+.swiper-pagination {
+  bottom: 10px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #000;
+}
