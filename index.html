@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Editing App</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="card-editor">
+    <!-- Swiper container for cards -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide card">
+          <div class="card-content" id="card1">
+            <!-- Draggable text elements will be added here -->
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <div class="card-content" id="card2">
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <div class="card-content" id="card3">
+          </div>
+        </div>
+      </div>
+      <!-- Navigation arrows -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- Pagination dots -->
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Text styling controls -->
+    <div class="controls">
+      <select id="fontSize">
+        <option value="16">16px</option>
+        <option value="24">24px</option>
+        <option value="32">32px</option>
+      </select>
+      <select id="fontType">
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Courier">Courier</option>
+      </select>
+      <input type="color" id="fontColor" value="#000000">
+      <button id="addTextBtn">Add Text</button>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

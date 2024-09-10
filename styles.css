@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .card-editor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .swiper-container {
+    width: 400px; /* Adjust according to your 9:16 ratio */
+    height: 711px; /* Adjust according to your 9:16 ratio */
+    background-color: #f0f0f0;
+    margin-right: 20px;
+    position: relative;
+    overflow:hidden; /* Hide overflow */
+   /* Ensure padding and border are included in width and height */
+
+}
+  
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    overflow: hidden;
+  }
+  
+  .swiper-slide {
+    width: 100%; /* Ensure each slide takes full container width */
+    height: 100%; /* Ensure each slide takes full container height */
+    box-sizing: border-box; /* Ensure padding and border are included in width and height */
+  }
+
+  .card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure the content remains inside the card */
+  }
+  
+  .draggable-text {
+    position: absolute;
+    cursor: move;
+    padding: 10px;
+    display: inline-block;
+    resize: both; /* Allow resizing */
+    overflow: hidden;
+    max-width: 100%; /* Restrict the text box within the card's width */
+    max-height: 100%; /* Restrict the text box within the card's height */
+    box-sizing: border-box;
+    word-wrap: break-word; /* Ensure long words are wrapped to the next line */
+  }
+
+  .controls {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input[type="text"], select {
+    width: 200px;
+  }
+
+  
+  .swiper-button-next, .swiper-button-prev {
+    color: #000;
+  }
+  
+  .swiper-pagination {
+    bottom: 10px;
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #000;
+  }
+
+  
