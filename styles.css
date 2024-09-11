@@ -45,6 +45,8 @@ body {
 }
 
 .draggable-text {
+  top: 10px; /* Initial position, you can modify this */
+  left: 10px; /* Initial position, you can modify this */
   position: absolute;
   cursor: move;
   padding: 10px;
@@ -55,7 +57,7 @@ body {
   max-height: 100%;
   box-sizing: border-box;
   word-wrap: break-word;
-  resize: both;
+  /* resize: both; */
 }
 
 .controls {

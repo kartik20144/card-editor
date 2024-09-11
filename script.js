@@ -235,27 +235,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function makeTextDraggable(textElement) {
     let isDragging = false;
-    let isResizing = false;
+    // let isResizing = false;
     let offsetX, offsetY;
 
-    textElement.addEventListener("focus", function () {
-      textElement.style.resize = "both";
-    });
+    // textElement.addEventListener("focus", function () {
+    //   textElement.style.resize = "both";
+    // });
 
     textElement.addEventListener("mousedown", function (e) {
-      const isResizingCorner =
-        e.target === textElement &&
-        e.offsetX >= textElement.clientWidth - 10 &&
-        e.offsetY >= textElement.clientHeight - 10;
+      // const isResizingCorner =
+      //   e.target === textElement &&
+      //   e.offsetX >= textElement.clientWidth - 10 &&
+      //   e.offsetY >= textElement.clientHeight - 10;
 
-      if (isResizingCorner) {
-        isResizing = true;
-      } else {
-        isDragging = true;
+      // if (isResizingCorner) {
+      //   isResizing = true;
+      // } else {
+      //   isDragging = true;
+      //   offsetX = e.clientX - textElement.getBoundingClientRect().left;
+      //   offsetY = e.clientY - textElement.getBoundingClientRect().top;
+      //   textElement.style.zIndex = 1000;
+      // }
+
+      isDragging = true;
         offsetX = e.clientX - textElement.getBoundingClientRect().left;
         offsetY = e.clientY - textElement.getBoundingClientRect().top;
         textElement.style.zIndex = 1000;
-      }
 
       selectedTextElement = textElement;
     });
@@ -289,14 +294,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener("mouseup", function () {
       isDragging = false;
-      isResizing = false;
+      // isResizing = false;
       textElement.style.zIndex = "";
     });
 
-    textElement.addEventListener("blur", function () {
-      textElement.style.resize = "none";
-    });
-  }
+  //   textElement.addEventListener("blur", function () {
+  //     textElement.style.resize = "none";
+  //   });
+   }
 
   document.addEventListener("focusin", function (e) {
     if (e.target.classList.contains("draggable-text")) {
