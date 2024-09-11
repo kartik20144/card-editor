@@ -193,3 +193,8 @@ p {
 #cancelPagesBtn {
   margin-top: 10px;
 }
+
+
+select{
+  height: 25px;
+}
